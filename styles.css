@@ -1,0 +1,643 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для навигационных ссылок */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand .logo {
+    max-height: 80px;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    padding: 0 15px;
+    font-weight: 500;
+    position: relative;
+    margin-top: -20px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link::after {
+    content: '|';
+    position: absolute;
+    right: -5px;
+    color: #a5d6a7; 
+}
+
+.navbar-nav .nav-link:last-child::after {
+    font-size: 10px;
+    top: 5px;
+    content: '|';
+    position: absolute;
+    color: #62D078;
+}
+
+/* Стили для контактных колонок */
+.navbar-contact {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.contact-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.contact-column img {
+    height: 20px;
+    width: 20px;
+}
+
+.contact-column a {
+    font-size: 14px;
+    color: #62D078;
+    text-decoration: underline;
+}
+
+.contact-column span {
+    font-size: 14px;
+    color: #000;
+}
+
+.link-column {
+    display: flex;
+    align-items: center;
+}
+
+.booking-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #62D078;
+    border: 1px solid #62D078;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.booking-link:hover {
+    color: #62D078;
+    border: 1px solid #62D078;
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+/* Стили для мобильного режима */
+@media (max-width: 768px) {
+    .navbar-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .contact-column {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .navbar-collapse {
+        background-color: white;
+    }
+}
+
+
+/* Обложка */
+.cover {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('img/background.png');
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.cover-content h2 {
+    font-size: 36px;
+    text-align: left;
+    top: 115px;
+    position: relative;
+}
+
+.cover-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cover-content ul li {
+    font-size: 18px;
+    text-align: left;
+    top: 110px;
+    position: relative;
+}
+
+/* Секция услуг */
+.services {
+    padding: 60px 0;
+}
+
+.service-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.service-item {
+    flex: 1 1 calc(33.333% - 0px); 
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px; 
+}
+
+.service-item img {
+    max-width: 100px;
+    max-height: 80px;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.service-item-1 {
+    background-color: #5AD078;
+}
+
+.service-item-2 {
+    background-color: #65DDBA;
+}
+
+.service-item-3 {
+    background-color: #64CECE;
+}
+
+.service-item-4 {
+    background-color: #51AAC8;
+}
+
+.service-item-5 {
+    background-color: #4A99C2;
+}
+
+.service-item-6 {
+    background-color: #4A88C1;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-item {
+        flex: 1 1 100%;
+        padding: 15px;
+    }
+}
+
+
+/* Контент */
+.content {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.col-md-8 p {
+    max-width: 100%;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 15px;
+}
+
+.col-md-4 {
+    text-align: right;
+}
+
+.col-md-4 h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.col-md-4 p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.image {
+    max-width: 50%;
+    height: auto;
+}
+
+
+/* Преимущества */
+.advantages {
+    background-color: #DFF1FF;
+    padding-top: 15px;
+}
+
+.advantages h2 {
+    color: #546673;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.advantage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantage-item img {
+    max-width: 80px; 
+    margin-bottom: 15px;
+}
+
+.advantage-item p {
+    color: #546673;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Отзывы пациентов */
+
+.slider-title {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #5F6C7B;
+    font-weight: bold;
+}
+
+.slider-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.border {
+    border: 1px solid #5F6C7B;
+    height: 240px;
+    width: 330px;
+    position: relative;
+}
+
+.quotes-top {
+    color: #5F6C7B;
+    font-size: 70px;
+    line-height: 0;
+    margin: 0;
+    text-align: left;
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.quotes-bottom {
+    color: #5F6C7B;
+    font-size: 70px;
+    line-height: 0;
+    margin: 0;
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.review-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 20px;
+    font-style: italic;
+    color: #5F6C7B;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.author-center {
+    display: flex;
+    justify-content: center;
+}
+
+.author {
+    font-weight: bold;
+    bottom: 0px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-nav button {
+    background-color: rgba(0, 0, 0, 0);
+    border: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.slider-arrow {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.read-more-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #5F6C7B;
+    color: #5F6C7B;
+    text-decoration: none;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.read-more:hover {
+    background-color: #5F6C7B;
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .border {
+        height: 200px;
+        width: 100%;
+        margin: 5px;
+    }
+
+    .quotes-top,
+    .quotes-bottom {
+        font-size: 40px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+    .author {
+        max-width: 90px;
+    } 
+}
+
+@media (max-width: 480px) {
+    .border {
+        height: auto;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .slide {
+        flex-direction: column;
+    }
+
+    .quotes-top,
+    .quotes-bottom {
+        font-size: 30px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+}
+
+/* Запись */
+.appointment-block {
+    margin-top: 80px;
+    background-color: #eaf6f3;
+}
+
+.appointment-container {
+    max-width: 1159px;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 60px;
+}
+
+.appointment-title {
+    text-align: center;
+    font-size: 24px;
+    color: #27a690;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #51A491, #519E9C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.appointment-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-button {
+    background: linear-gradient(to right, #52AC85, #51A68E);
+    color: #ffffff;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; 
+    cursor: pointer;
+    width: 200px; 
+    margin: 0 auto; 
+    display: block;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+}
+
+.info-section {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.info-section p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #519C9F, #4F8FB0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.note {
+    font-size: 12px;
+    color: #999999;
+}
+
+.info-arrow {
+    display: flex;
+    justify-content: center;
+}
+
+.arrow {
+    width: 40px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .form-section {
+        flex-direction: column;
+    }
+
+    .info-section {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .arrow {
+        width: 0;
+        margin-top: 0;
+    }
+}
+
+/* Футер */
+.footer-1 {
+    background: linear-gradient(to right, #54BC6E, #4F86BF);
+    padding-top: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-nav {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.footer-nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-2 {
+    background: linear-gradient(to right, #54BC6E, #4F86BF);
+    padding: 5px 0;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 1px;
+}
+
+.clinic-info {
+    margin-top: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.сopyright-img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.copyright {
+    margin: 0;
+    text-align: right;
+}
